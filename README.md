@@ -1,9 +1,9 @@
-# susehackweek2022
+# SUSE Hack Week 2022
 
-This is the result of:
+This is the result of this SUSE Hack Week project:
 https://hackweek.opensuse.org/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript
 
-The goal is to learn TensorflowJS and to put on practice what I have learn in week 1 of https://www.coursera.org/learn/ai-for-medical-diagnosis.
+The goal was to learn TensorflowJS and to put on practice what I have learn in week 1 of https://www.coursera.org/learn/ai-for-medical-diagnosis.
 
 ## Resources used
 
