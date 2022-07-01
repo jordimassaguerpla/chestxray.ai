@@ -38,12 +38,8 @@ What is interesting is that using a saved model with tensorflowjs, **we do not n
 
 ## Results
 
-Despite this looking very easy and cool, we are not getting the same results as in the coursera exercise, were we were using the python implementation of tensorflow/keras. This deserves further investigation.
-
 This is a screenshot of the resulting page:
 
-![image](https://user-images.githubusercontent.com/1148215/176724762-846504b5-110d-4de6-89c2-0a5b38223d89.png)
 
-## More
+![image](https://user-images.githubusercontent.com/1148215/176908228-ffae44cc-92b8-4d62-af8c-c22b6a3bce6d.png)
 
-Follow the discourse thread at https://community.deeplearning.ai/t/deploying-the-chest-x-ray-medical-diagnosis-with-tensorflowjs/150266
