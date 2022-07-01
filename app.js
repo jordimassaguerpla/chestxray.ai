@@ -11,7 +11,7 @@ async function run() {
   tensorImg = tf.browser.fromPixels(image).resizeBilinear([320, 320]).toFloat().sub(tf.scalar(training_avg)).div(tf.scalar(training_stdev));
   const prediction = model.predict(tensorImg.expandDims());
   prediction_data = prediction.dataSync();
-  document.getElementById("prediction").innerText = " Cardiomegaly: " + prediction_data[0] + "\n Mass: " + prediction_data[5] + "\n Pneumotorax: " + prediction_data[8] + "\n Edema: " + prediction_data[12];
+  document.getElementById("prediction").innerText = " Cardiomegaly: " + Math.round(prediction_data[0]*100.0) + "%\n Mass: " + Math.round(prediction_data[5]*100.0) + "%\n Pneumotorax: " + Math.round(prediction_data[8]*100.0) + "%\n Edema: " + Math.round(prediction_data[12]*100)+"%";
 }
 
 run();
