@@ -28,6 +28,14 @@ The dataset used is the result of this research paper: [Xiaosong Wang, Yifan Pen
 
 The dataset is available at the [NIH Clinical Center, America's Research Hospital](https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
+This dataset has been annotated by consensus among four different radiologists for 5 of our 14 pathologies:
+
+   * Consolidation
+   * Edema
+   * Effusion
+   * Cardiomegaly
+   * Atelectasis
+
 ## Model
 
 This is using the saved model that was trained as an exercise in the first week of [AI for Medical Diagnosis](https://www.coursera.org/learn/ai-for-medical-diagnosis). Then, it performs the same transformations that were done during training to an X-Ray Image: scaling and normalization, and computes a prediction. All this is done with javascript, meaning that we are using the hardware (CPU/GPU) from the user.
