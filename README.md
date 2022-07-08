@@ -46,7 +46,7 @@ This model was implemented and trained by [DeepLearning.AI](https://deeplearning
 
 What is interesting is that using a saved model with tensorflowjs, **we do not need a "big server"**, but just the web server of your choice (i.e. apache2) to serve the static files. This could also easily be distributed with a Content Delivery Network (CDN).
 
-Just copy the model from (https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs)[https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs] into the webserver, and then copy the files from this project.
+Just copy the model from [https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs](https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs) into the webserver, and then copy the files from this project.
 
 ## Legal
 
