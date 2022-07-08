@@ -17,7 +17,7 @@ X-Ray images are never uploaded to a server. Instead, all the calculations are d
 
 ## Credits
 
-This project was initially developed at the [21st SUSE Hackweek project](https://hackweek.opensuse.org/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript), and based on [DeepLearning.AI](https://deeplearning.ai) [AI for Medical Diagnosis course](https://www.coursera.org/learn/ai-for-medical-diagnosis).
+This project was initially developed at the [21st SUSE Hackweek project](https://hackweek.opensuse.org/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript), and based on [DeepLearning.AI](https://deeplearning.ai)[AI for Medical Diagnosis course](https://www.coursera.org/learn/ai-for-medical-diagnosis).
 
 Thanks to [SUSE](https://www.suse.com) for letting me hack on this project for a week, and to [DeepLearning.AI](https://deeplearning.ai) for such brilliant course, and the permission to use and publish the model for non-comercial purposes.
 
@@ -45,7 +45,7 @@ This model was implemented and trained by [DeepLearning.AI](https://deeplearning
 
 What is interesting is that using a saved model with tensorflowjs, **we do not need a "big server"**, but just the web server of your choice (i.e. apache2) to serve the static files. This could also easily be distributed with a Content Delivery Network (CDN).
 
-Just copy the model from https://github.com/jordimassaguerpla/model.chestxray.ai into the webserver, and then copy the files from this project.
+Just copy the model from (https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs)[https://github.com/jordimassaguerpla/model.chestxray.ai/tree/main/saved_model.tfjs] into the webserver, and then copy the files from this project.
 
 ## Legal
 
