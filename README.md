@@ -13,7 +13,7 @@ This is a very simple page that lets you upload an X-Ray image of you Chest, and
 
 ## Privacy
 
-X-Ray images are never uploaded to a server. Instead, all the calculations are done on the browser, meaning your X-Ray image never leaves your computer, and thus it is not shared with anyone else.
+X-Ray images are never uploaded to a server. Instead, all the calculations are done in the browser, meaning your X-Ray image never leaves your computer, and thus it is not shared with anyone else.
 
 ## Credits
 
