@@ -17,9 +17,10 @@ X-Ray images are never uploaded to a server. Instead, all the calculations are d
 
 ## Credits
 
-This project was initially developed at the [21st SUSE Hackweek project](https://hackweek.opensuse.org/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript), and based on [DeepLearning.AI](https://deeplearning.ai)[AI for Medical Diagnosis course](https://www.coursera.org/learn/ai-for-medical-diagnosis).
+This project was initially developed at the [21st SUSE Hackweek project](https://hackweek.opensuse.org/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript), and based on [DeepLearning.AI](https://deeplearning.ai) [AI for Medical Diagnosis course](https://www.coursera.org/learn/ai-for-medical-diagnosis).
 
-Thanks to [SUSE](https://www.suse.com) for letting me hack on this project for a week, and to [DeepLearning.AI](https://deeplearning.ai) for such brilliant course, and the permission to use and publish the model for non-comercial purposes.
+Thanks to [SUSE](https://www.suse.com) for letting me hack on this project for a week.
+Thanks to [DeepLearning.AI](https://deeplearning.ai) for such brilliant course, and the permission to use and publish the model for non-comercial purposes.
 
 ## Dataset
 
@@ -29,7 +30,7 @@ The dataset is available at the [NIH Clinical Center, America's Research Hospita
 
 ## Model
 
-This is using the saved model that was trained as an exercise in the first week of [AI for Medical Diagnosis] (https://www.coursera.org/learn/ai-for-medical-diagnosis). Then, it performs the same transformations that were done during training to an X-Ray Image: scaling and normalization, and computes a prediction. All this is done with javascript, meaning that we are using the hardware (CPU/GPU) from the user.
+This is using the saved model that was trained as an exercise in the first week of [AI for Medical Diagnosis](https://www.coursera.org/learn/ai-for-medical-diagnosis). Then, it performs the same transformations that were done during training to an X-Ray Image: scaling and normalization, and computes a prediction. All this is done with javascript, meaning that we are using the hardware (CPU/GPU) from the user.
 
 To save the model I had to add this to the coursera assignment:
 ```model.save("models/nih/saved_model.h5")```
