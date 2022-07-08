@@ -12,12 +12,11 @@ async function run_prediction() {
   // Import model
   image = document.getElementById("example_image");
   const model = await tf.loadLayersModel('http://localhost/ml/saved_model.tfjs/model.json');
-  // Infere
-  canvas = document.getElementById("canvas_1");
-  // Normalize
+  // Normalize the same way that was done for training:
+  //  - scale, substract the training average value, and divide by the standard deviation. 
   training_avg = 126.0662;
   training_stdev = 63.458977;
-  // resizeBilinear given this is the default for Keras https://keras.io/api/preprocessing/image/
+  // Use resizeBilinear given this was the resize method used for training
   tensorImg = tf.browser.fromPixels(image).resizeBilinear([320, 320]).toFloat().sub(tf.scalar(training_avg)).div(tf.scalar(training_stdev));
   const prediction = model.predict(tensorImg.expandDims());
   prediction_data = prediction.dataSync();
