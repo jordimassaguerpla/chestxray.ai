@@ -50,6 +50,10 @@ docker run -it --rm -v `pwd`:/python evenchange4/docker-tfjs-converter tensorflo
 ```
 This model was implemented and trained by [DeepLearning.AI](https://deeplearning.ai).
 
+## Model Metrics
+
+See https://github.com/jordimassaguerpla/model.chestxray.ai/blob/main/metrics.md for the metrics.
+
 ## Deploying
 
 Since we are using a saved model with tensorflowjs, **we do not need a "big server"**, but just the web server of your choice (i.e. apache2) to serve the static files. This could also easily be distributed with a Content Delivery Network (CDN).
