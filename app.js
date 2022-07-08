@@ -11,7 +11,7 @@ function load_image() {
 async function run_prediction() {
   // Import model
   image = document.getElementById("example_image");
-  const model = await tf.loadLayersModel('http://localhost/ml/saved_model.tfjs/model.json');
+  const model = await tf.loadLayersModel('saved_model.tfjs/model.json');
   // Normalize the same way that was done for training:
   //  - scale, substract the training average value, and divide by the standard deviation. 
   training_avg = 126.0662;
