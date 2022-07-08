@@ -9,7 +9,7 @@ This is a very simple page that lets you upload an X-Ray image of you Chest, and
 * Pneumotorax
 * Edema
 
-![image](https://user-images.githubusercontent.com/1148215/176908228-ffae44cc-92b8-4d62-af8c-c22b6a3bce6d.png)
+![image](https://user-images.githubusercontent.com/1148215/178037624-4cf14e28-ba8b-4907-8dda-191c17a2ab54.png)
 
 ## Privacy
 
