@@ -1,4 +1,14 @@
-async function run() {
+function load_image() {
+  const image_input = document.querySelector("#image-input");
+  image_input.addEventListener("change", function(event) {
+    var image = document.getElementById('example_image');
+    image.src = URL.createObjectURL(event.target.files[0]);
+    document.getElementById('prediction').innerText = "Calculating prediction...";
+    run_prediction();
+  });
+}
+
+async function run_prediction() {
   // Import model
   image = document.getElementById("example_image");
   const model = await tf.loadLayersModel('http://localhost/ml/saved_model.tfjs/model.json');
@@ -14,4 +24,5 @@ async function run() {
   document.getElementById("prediction").innerText = " Cardiomegaly: " + Math.round(prediction_data[0]*100.0) + "%\n Mass: " + Math.round(prediction_data[5]*100.0) + "%\n Pneumotorax: " + Math.round(prediction_data[8]*100.0) + "%\n Edema: " + Math.round(prediction_data[12]*100)+"%";
 }
 
-run();
+load_image();
+run_prediction();
