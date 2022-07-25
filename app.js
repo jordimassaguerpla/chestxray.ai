@@ -221,6 +221,11 @@ function register_load_image() {
 }
 
 async function run_prediction() {
+  // positions in the resulting array of every disease
+  const cardiomegaly_pos = 0;
+  const mass_pos = 5;
+  const pneumo_pos = 8;
+  const edema_pos = 12;
   // Import model
   const image = document.getElementById("example_image");
   const model = await tf.loadLayersModel('saved_model.tfjs/model.json');
@@ -233,20 +238,20 @@ async function run_prediction() {
   let tensorImg = tf.browser.fromPixels(image).resizeBilinear([320, 320]).toFloat().sub(tf.scalar(training_avg)).div(tf.scalar(training_stdev));
   const prediction = model.predict(tensorImg.expandDims());
   const prediction_data = prediction.dataSync();
-  document.getElementById("cardiomegaly_div_prediction").innerText = "Cardiomegaly: " + Math.round(prediction_data[0]*100.0) + "%";
-  if (prediction_data[0] >= threshold) {
+  document.getElementById("cardiomegaly_div_prediction").innerText = "Cardiomegaly: " + Math.round(prediction_data[cardiomegaly_pos]*100.0) + "%";
+  if (prediction_data[cardiomegaly_pos] >= threshold) {
     document.getElementById("cardiomegaly_div").style.borderColor="red";
   }
-  document.getElementById("mass_div_prediction").innerText = "Mass: " + Math.round(prediction_data[5]*100.0) + "%";
-  if (prediction_data[5] >= threshold) {
+  document.getElementById("mass_div_prediction").innerText = "Mass: " + Math.round(prediction_data[mass_pos]*100.0) + "%";
+  if (prediction_data[mass_pos] >= threshold) {
     document.getElementById("mass_div").style.borderColor="red";
   }
-  document.getElementById("pneumotorax_div_prediction").innerText = "Pneumotorax: " + Math.round(prediction_data[8]*100.0) + "%";
-  if (prediction_data[8] >= threshold) {
+  document.getElementById("pneumotorax_div_prediction").innerText = "Pneumotorax: " + Math.round(prediction_data[pneumo_pos]*100.0) + "%";
+  if (prediction_data[pneumo_pos] >= threshold) {
     document.getElementById("pneumotorax_div").style.borderColor="red";
   }
-  document.getElementById("edema_div_prediction").innerText = "Edema: " + Math.round(prediction_data[12]*100)+"%";
-  if (prediction_data[12] >= threshold) {
+  document.getElementById("edema_div_prediction").innerText = "Edema: " + Math.round(prediction_data[edema_pos]*100)+"%";
+  if (prediction_data[edema_pos] >= threshold) {
     document.getElementById("edema_div").style.borderColor="red";
   }
   // for DenseNet121, we want to look for the BN layer and not the last Conv one
