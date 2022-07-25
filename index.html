@@ -10,20 +10,37 @@
   <body>
    <h1>Chest X-Ray Medical Diagnosis</h1>
    <p>
-    Load image from your local computer:
-    <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"/>
-   </p>
-    <img id="example_image" src="00011355_002.png" width="320px" height="320px"/>
-    <!-- <img id="example_image" src="00008270_015.png" width="320px" height="320px"/> -->
-    <canvas id="canvas_1"></canvas>
-    <div id="prediction">Calculating prediction...</div>
+      Load image from your local computer:
+      <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg" disabled="true"/>
+    </p>
+    <div id="image_example_div" style="margin: 10px">
+      <img id="example_image" src="00011355_002.png" width="320px" height="320px"/>
+    </div>
+    <div id="cardiomegaly_div" style="float: left;border: 2px;border-style: solid;border-width: 2px;border-color: grey">
+      <div id="cardiomegaly_div_prediction">Cardiomegaly: Calculating...</div>
+      <canvas id="canvas_result_image_cardiomegaly"></canvas>
+    </div>
+    <div id="mass_div" style="float: left;border: 2px;border-style: solid;border-width: 2px;border-color: grey">
+      <div id="mass_div_prediction">Mass: Calculating...</div>
+      <canvas id="canvas_result_image_mass"></canvas>
+    </div>
+    <div id="pneumotorax_div" style="float: left;border-style: solid;border-width: 2px;border-color: grey">
+      <div id="pneumotorax_div_prediction">Pneumotorax: Calculating...</div>
+      <canvas id="canvas_result_image_pneumotorax"></canvas>
+    </div>
+    <div id="edema_div" style="float: left;border-style: solid;border-width: 2px;border-color: grey">
+      <div id="edema_div_prediction">Edema: Calculating...</div>
+      <canvas id="canvas_result_image_edema"></canvas>
+    </div>
     <script src="./app.js"> </script>
-    <p>
-    <a href="https://github.com/jordimassaguerpla/chestxray.ai">code</a> | <a href="https://github.com/jordimassaguerpla/model.chestxray.ai">model</a> | <a href="https://github.com/jordimassaguerpla/model.chestxray.ai/blob/main/metrics.md">metrics</a><br/>
-    <a href="https://hackweek.opensuse.org/21/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript">SUSE HackWeek Project 2022</a> | <a href="https://www.coursera.org/learn/ai-for-medical-diagnosis">DeepLearning.AI AI for Medical Diagnosis course.</a>
-    </p>
-    <p>
-    <i>DISCLAIMER: This is a project to demonstrate the usage of Javascript Tensorflow. Do NOT use this for REAL for Medical Diagnosis.</i>
-    </p>
+    <div id="footer" style="clear: both; text-align: center">
+      <p>
+      <a href="https://github.com/jordimassaguerpla/chestxray.ai">code</a> | <a href="https://github.com/jordimassaguerpla/model.chestxray.ai">model</a> | <a href="https://github.com/jordimassaguerpla/model.chestxray.ai/blob/main/metrics.md">metrics</a><br/>
+      <a href="https://hackweek.opensuse.org/21/projects/chest-x-ray-medical-diagnosis-with-deep-learning-and-javascript">SUSE HackWeek Project 2022</a> | <a href="https://www.coursera.org/learn/ai-for-medical-diagnosis">DeepLearning.AI AI for Medical Diagnosis course.</a>
+      </p>
+      <p style="text-align: left">
+      <i>DISCLAIMER: This is a project to demonstrate the usage of Javascript Tensorflow. Do NOT use this for REAL for Medical Diagnosis.</i>
+      </p>
+    </div>
   </body>
 </html>

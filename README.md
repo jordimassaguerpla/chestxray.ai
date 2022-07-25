@@ -22,6 +22,8 @@ This project was initially developed at the [21st SUSE Hackweek project](https:/
 Thanks to [SUSE](https://www.suse.com) for letting me hack on this project for a week.
 Thanks to [DeepLearning.AI](https://deeplearning.ai) for such brilliant course, and the permission to use and publish the model for non-comercial purposes.
 
+The CAM visualization was copied and modified from https://github.com/tensorflow/tfjs-examples/tree/master/visualize-convnet.
+
 ## Dataset
 
 The dataset used is the result of this research paper: [Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, MohammadhadiBagheri, Ronald M. Summers.ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases, IEEE CVPR, pp. 3462-3471,2017@InProceedings](https://nihcc.app.box.com/v/ChestXray-NIHCC/file/256057377774).
